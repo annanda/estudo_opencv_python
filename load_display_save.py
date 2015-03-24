@@ -12,4 +12,4 @@ print "channels: %d" % (image.shape[2])
 
 cv2.imshow("Image", image)
 cv2.waitKey(0)
-cv2.inwrite("newimage.jpg", image)
+cv2.imwrite("images/newimage.jpg", image)
