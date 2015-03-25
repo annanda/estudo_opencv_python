@@ -34,3 +34,18 @@ cv2.rectangle(canvas, (200, 50), (225, 125), blue, -1)
 # com o argumente da espessura da linha em -1 ele preenche o retangulo
 cv2.imshow("Canvas", canvas)
 cv2.waitKey(0)
+
+canvas = np.zeros((300, 300, 3), dtype="uint8")
+(centerX, centerY) = (canvas.shape[1] / 2, canvas.shape[0] / 2)
+# para encontrar o pixel central da tela
+white = (255, 255, 255)
+
+for r in xrange(0, 175, 25):
+    cv2.circle(canvas, (centerX, centerY), r, white)
+# local para desenhar o circulo,
+# coordenada do pixel central do circulo,
+# raio do circulo
+# cor do circulo
+
+cv2.imshow("Canvas", canvas)
+cv2.waitKey(0)
