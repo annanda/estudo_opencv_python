@@ -52,9 +52,11 @@ cv2.waitKey(0)
 
 for i in xrange(0, 25):
     radius = np.random.randint(5, high=200)
+# retorna um numero inteiro aleatorio no intervalo [5, 199]
     color = np.random.randint(0, high=256, size=(3,))
+# retorna um array com 3 numeros aleatorios no intervalo [0, 255]
     pt = np.random.randint(0, high=300, size=(2,))
-
+# retorna um array com 2 numeros aleatorios no intervalo [0, 299]
     cv2.circle(canvas, tuple(pt), radius, tuple(color), -1)
 
 cv2.imshow("Canvas", canvas)
