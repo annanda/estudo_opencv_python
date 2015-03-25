@@ -24,3 +24,7 @@ cv2.rectangle(canvas, (10, 10), (60, 60), green)
 # cor desejada
 cv2.imshow("Canvas", canvas)
 cv2.waitKey(0)
+
+cv2.rectangle(canvas, (50, 200), (200, 125), red, 5)
+cv2.imshow("Canvas", canvas)
+cv2.waitKey(0)
