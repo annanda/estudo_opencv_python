@@ -49,3 +49,13 @@ for r in xrange(0, 175, 25):
 
 cv2.imshow("Canvas", canvas)
 cv2.waitKey(0)
+
+for i in xrange(0, 25):
+    radius = np.random.randint(5, high=200)
+    color = np.random.randint(0, high=256, size=(3,))
+    pt = np.random.randint(0, high=300, size=(2,))
+
+    cv2.circle(canvas, tuple(pt), radius, tuple(color), -1)
+
+cv2.imshow("Canvas", canvas)
+cv2.waitKey(0)
