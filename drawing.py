@@ -12,7 +12,8 @@ cv2.imshow("Canvas", canvas)
 cv2.waitKey(0)
 
 red = (0, 0, 255)
-cv2.line(canvas, (300, 0), (0, 300), red)
-# onde desenhar a linha, pixel inicial, pixel final, cor desejada
+cv2.line(canvas, (300, 0), (0, 300), red, 3)
+# onde desenhar a linha, pixel inicial, pixel final, cor desejada,
+# a largura da linha
 cv2.imshow("Canvas", canvas)
 cv2.waitKey(0)
