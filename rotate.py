@@ -14,13 +14,17 @@ cv2.imshow("Original", image)
 
 (h, w) = image.shape[:2]
 center = (w / 2, h / 2)
-# o ultimo argumento é a escala de tamanho da imagem
+# o ultimo argumento e a escala de tamanho da imagem
 M = cv2.getRotationMatrix2D(center, 45, 1.0)
 rotated = cv2.warpAffine(image, M, (w, h))
 cv2.imshow("Rotated by 45 Degrees", rotated)
 cv2.waitKey(0)
 
 M = cv2.getRotationMatrix2D(center, -90, 1.0)
-rotated = cv2.warpAffine(image, M, (w,h))
+rotated = cv2.warpAffine(image, M, (w, h))
 cv2.imshow("Rotated by -90 Degrees", rotated)
+cv2.waitKey(0)
+
+rotated = imutils.rotate(image, 75)
+cv2.imshow("Rotated by 75 Degrees", rotated)
 cv2.waitKey(0)
