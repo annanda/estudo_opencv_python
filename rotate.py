@@ -10,6 +10,8 @@ args = vars(ap.parse_args())
 image = cv2.imread(args["image"])
 cv2.imshow("Original", image)
 
+# import bpdb; bpdb.set_trace() -- para depurar com Bpython
+
 (h, w) = image.shape[:2]
 center = (w / 2, h / 2)
 M = cv2.getRotationMatrix2D(center, 45, 1.0)
