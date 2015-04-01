@@ -18,3 +18,10 @@ dim = (150, int(image.shape[0] * r))
 resized = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
 cv2.imshow("Resized (Width)", resized)
 cv2.waitKey(0)
+
+# definindo a altura desejada
+r = 200.0 / image.shape[0]
+dim = (int(image.shape[1] * r), 200)
+resized = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
+cv2.imshow("Risized (h)", resized)
+cv2.waitKey(0)
