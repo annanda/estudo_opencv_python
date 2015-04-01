@@ -18,7 +18,10 @@ print "wrap around: " + str(np.uint8([200]) + np.uint8([100]))
 print "wrap around: " + str(np.uint8([50]) - np.uint8([100]))
 
 # import bpdb; bpdb.set_trace()
+
 # cria uma matriz que vai ser adicionada a minha imagem
+# essa matriz tem o mesmo tamanho da imagem dada
+# e cada celula da matriz tem 3 campos para GBR (os vaLores de RGB)
 M = np.ones(image.shape, dtype="uint8") * 100
 added = cv2.add(image, M)
 cv2.imshow("Added", added)
