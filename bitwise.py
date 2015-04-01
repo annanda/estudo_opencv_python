@@ -20,3 +20,15 @@ cv2.waitKey(0)
 bitwiseOr = cv2.bitwise_or(rectangle, circle)
 cv2.imshow("OR", bitwiseOr)
 cv2.waitKey(0)
+
+bitwiseXor = cv2.bitwise_xor(rectangle, circle)
+cv2.imshow("XOR", bitwiseXor)
+cv2.waitKey(0)
+
+bitwiseNot = cv2.bitwise_not(circle)
+cv2.imshow("NOT", bitwiseNot)
+cv2.waitKey(0)
+
+bitwiseNot = cv2.bitwise_not(rectangle)
+cv2.imshow("NOT", bitwiseNot)
+cv2.waitKey(0)
