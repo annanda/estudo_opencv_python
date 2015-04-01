@@ -23,5 +23,10 @@ cv2.waitKey(0)
 r = 200.0 / image.shape[0]
 dim = (int(image.shape[1] * r), 200)
 resized = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
-cv2.imshow("Risized (h)", resized)
+cv2.imshow("Risized in Height", resized)
+cv2.waitKey(0)
+
+# usando a funcao de imutils
+resized = imutils.resize(image, width=150)
+cv2.imshow("Resized with function", resized)
 cv2.waitKey(0)
