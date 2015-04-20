@@ -24,3 +24,11 @@ for (chan, color) in zip(chans, colors):
 
 plt.show()
 cv2.waitKey(0)
+
+fig = plt.figure()
+ax = fig.add_subplot(131)
+hist = cv2.calcHist([chans[1], chans[0]], [0, 1], None, [32, 32], [0, 256, 0, 256])
+p = ax.imshow(hist, interpolation="nearest")
+ax.set_title("2D Color Histogram for G and B")
+plt.colorbar(p)
+plt.show()
