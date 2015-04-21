@@ -16,7 +16,6 @@ def plot_histogram(image, title, mask=None):
         hist = cv2.calcHist([chan], [0], mask, [256], [0, 256])
         plt.plot(hist, color=color)
         plt.xlim([0, 256])
-    plt.show()
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True, help="Path to the image")
@@ -36,3 +35,6 @@ cv2.imshow("Mask", mask)
 masked = cv2.bitwise_and(image, image, mask=mask)
 cv2.imshow("Applying the Mask", masked)
 cv2.waitKey(0)
+
+plot_histogram(image, "Histogram for Masked Image", mask=mask)
+plt.show()
