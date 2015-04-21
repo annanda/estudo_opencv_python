@@ -32,5 +32,7 @@ mask = np.zeros(image.shape[:2], dtype="uint8")
 cv2.rectangle(mask, (15, 15), (130, 100), 255, -1)
 cv2.imshow("Mask", mask)
 
+
 masked = cv2.bitwise_and(image, image, mask=mask)
 cv2.imshow("Applying the Mask", masked)
+cv2.waitKey(0)
