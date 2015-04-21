@@ -45,6 +45,10 @@ hist = cv2.calcHist([chans[0], chans[2]], [0, 1], None, [32, 32], [0, 256, 0, 25
 p = ax.imshow(hist, interpolation="nearest")
 ax.set_title("2D Color Histogram for B and R")
 plt.colorbar(p)
-plt.show()
 
 print "2D histogram shape: %s, with %d values" % (hist.shape, hist.flatten().shape[0])
+
+hist = cv2.calcHist([image], [0, 1, 2], None, [8, 8, 8], [0, 256, 0, 256, 0, 256])
+print "3D histogram shape: %s, with %d values" % (hist.shape, hist.flatten().shape[0])
+
+plt.show()
