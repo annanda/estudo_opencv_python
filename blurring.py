@@ -21,7 +21,7 @@ blurred = np.hstack([
 cv2.imshow("Averaged", blurred)
 cv2.waitKey(0)
 
-# o ultimo parametro é o desvio padrao na direcao x
+# o ultimo parametro e o desvio padrao na direcao x
 # colocando em 0, falamos pro opencv calcular automaticamente
 # baseado no tamanho do nosso kernel de convolucao
 blurred = np.hstack([
@@ -29,4 +29,11 @@ blurred = np.hstack([
     cv2.GaussianBlur(image, (5, 5), 0),
     cv2.GaussianBlur(image, (7, 7), 0)])
 cv2.imshow("Gaussian", blurred)
+cv2.waitKey(0)
+
+blurred = np.hstack([
+    cv2.medianBlur(image, 3),
+    cv2.medianBlur(image, 5),
+    cv2.medianBlur(image, 7)])
+cv2.imshow("Median", blurred)
 cv2.waitKey(0)
