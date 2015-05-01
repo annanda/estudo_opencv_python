@@ -13,6 +13,7 @@ cv2.waitKey(0)
 # aplicando blur na imagem com kernel de 3x3, 5x5, 7x7
 # Quanto maior o kerner, mais borrada a imagem fica
 # Usando a media
+# cria um stack horizontal com as tres imagens em uma so janela
 blurred = np.hstack([
     cv2.blur(image, (3, 3)),
     cv2.blur(image, (5, 5)),
