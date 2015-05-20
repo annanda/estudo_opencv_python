@@ -13,10 +13,13 @@ while(True):
     ret, frame = cap.read()
 
     blurred = cv2.blur(frame, (7, 7))
+    blurred2 = cv2.GaussianBlur(frame, (7, 7), 0)
+    blurred3 = cv2.medianBlur(frame, 7)
+    blurred4 = cv2.bilateralFilter(frame, 7, 31, 31)
 
     # Mostrando o resultado
     cv2.imshow('Blurred', frame)
-    cv2.imshow('Blurred', blurred)
+    cv2.imshow('Blurred', blurred4)
     if cv2.waitKey(45) & 0xFF == ord('q'):
         break
 
