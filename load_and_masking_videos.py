@@ -12,9 +12,12 @@ while(True):
     # Capturando frame a frame
     ret, frame = cap.read()
 
+    blurred = cv2.blur(frame, (7, 7))
+
     # Mostrando o resultado
-    cv2.imshow('frame', frame)
-    if cv2.waitKey(0) & 0xFF == ord('q'):
+    cv2.imshow('Blurred', frame)
+    cv2.imshow('Blurred', blurred)
+    if cv2.waitKey(45) & 0xFF == ord('q'):
         break
 
 # When everything done, release the capture
